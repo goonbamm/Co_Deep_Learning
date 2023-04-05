@@ -1,0 +1,7 @@
+### alpaca_data.json
+- self-instruct(175개의 seed task로 데이터를 계속 생성) 방식을 통해 제작한 52000개의 데이터셋.
+- alpaca 모델을 fine-tuning하는데 사용되었다.
+
+### generate_instruction.py
+- alpaca_data.json 데이터 생성코드.
+

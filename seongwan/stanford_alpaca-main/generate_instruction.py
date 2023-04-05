@@ -118,13 +118,17 @@ def generate_instruction_following_data(
     top_p=1.0,
     num_cpus=16,
 ):
-    seed_tasks = [json.loads(l) for l in open(seed_tasks_path, "r")]
+    # 01. seed_instruction_data
+    # 175개의 seed task를 가져오기
+    seed_tasks = [json.loads(l) for l in open(seed_tasks_path, "r")] 
+    # seed_instruction_data에 seed task를 적절한 format으로 하나씩 넣기
     seed_instruction_data = [
         {"instruction": t["instruction"], "input": t["instances"][0]["input"], "output": t["instances"][0]["output"]}
         for t in seed_tasks
     ]
     print(f"Loaded {len(seed_instruction_data)} human-written seed instructions")
 
+    # 02 machine_instruction_data
     os.makedirs(output_dir, exist_ok=True)
     request_idx = 0
     # load the LM-generated instructions
@@ -133,7 +137,7 @@ def generate_instruction_following_data(
         machine_instruction_data = utils.jload(os.path.join(output_dir, "regen.json"))
         print(f"Loaded {len(machine_instruction_data)} machine-generated instructions")
 
-    # similarities = {}
+    # similarities = {} // 유사도를 체크해서 너무 유사한 문장은 제거
     scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=False)
 
     # now let's generate new instructions!
@@ -142,20 +146,23 @@ def generate_instruction_following_data(
         progress_bar.update(len(machine_instruction_data))
 
     # first we tokenize all the seed instructions and generated machine instructions
+    # 03. all_instructions = seed_instruction_data + machine_instruction_data -> Task Pool
     all_instructions = [d["instruction"] for d in seed_instruction_data] + [
         d["instruction"] for d in machine_instruction_data
     ]
     all_instruction_tokens = [scorer._tokenizer.tokenize(inst) for inst in all_instructions]
 
+    # 100개의 instruction 생성
     while len(machine_instruction_data) < num_instructions_to_generate:
         request_idx += 1
 
         batch_inputs = []
         for _ in range(request_batch_size):
             # only sampling from the seed tasks
-            prompt_instructions = random.sample(seed_instruction_data, num_prompt_instructions)
-            prompt = encode_prompt(prompt_instructions)
-            batch_inputs.append(prompt)
+            prompt_instructions = random.sample(seed_instruction_data, num_prompt_instructions) # seed로 부터 3개의 sample instruciton을 가져옴 
+            prompt = encode_prompt(prompt_instructions) # 템플릿 생성            
+            batch_inputs.append(prompt) # 5개의 prompt 생성-> batch size만큼
+        # GPT 언어모델 생성을 위한 args 설정
         decoding_args = utils.OpenAIDecodingArguments(
             temperature=temperature,
             n=1,
@@ -164,9 +171,10 @@ def generate_instruction_following_data(
             stop=["\n20", "20.", "20."],
         )
         request_start = time.time()
+
         results = utils.openai_completion(
             prompts=batch_inputs,
-            model_name=model_name,
+            model_name=model_name, #davinci-003
             batch_size=request_batch_size,
             decoding_args=decoding_args,
             logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
@@ -175,7 +183,8 @@ def generate_instruction_following_data(
 
         process_start = time.time()
         instruction_data = []
-        for result in results:
+        # gpt로 생성된 문장 후처리
+        for result in results:           
             new_instructions = post_process_gpt3_response(num_prompt_instructions, result)
             instruction_data += new_instructions
 

@@ -29,13 +29,13 @@ DEFAULT_PAD_TOKEN = "[PAD]"
 DEFAULT_EOS_TOKEN = "</s>"
 DEFAULT_BOS_TOKEN = "</s>"
 DEFAULT_UNK_TOKEN = "</s>"
-PROMPT_DICT = {
-    "prompt_input": (
+PROMPT_DICT = { 
+    "prompt_input": ( # input이 있을 때는 instruction과 input을 조합해서 input을 제작한다.
         "Below is an instruction that describes a task, paired with an input that provides further context. "
         "Write a response that appropriately completes the request.\n\n"
         "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:"
     ),
-    "prompt_no_input": (
+    "prompt_no_input": ( # input이 없을 때는 instruction만 가지고 input을 제작한다.
         "Below is an instruction that describes a task. "
         "Write a response that appropriately completes the request.\n\n"
         "### Instruction:\n{instruction}\n\n### Response:"
@@ -45,12 +45,12 @@ PROMPT_DICT = {
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
+    model_name_or_path: Optional[str] = field(default="facebook/opt-125m") # LLaMA의 checkpoint 경로 집어넣기
 
 
 @dataclass
 class DataArguments:
-    data_path: str = field(default=None, metadata={"help": "Path to the training data."})
+    data_path: str = field(default=None, metadata={"help": "Path to the training data."}) # fine-tuning 시킬 데이터
 
 
 @dataclass
@@ -82,7 +82,7 @@ def smart_tokenizer_and_embedding_resize(
     Note: This is the unoptimized version that may make your embedding size not be divisible by 64.
     """
     num_new_tokens = tokenizer.add_special_tokens(special_tokens_dict)
-    model.resize_token_embeddings(len(tokenizer))
+    model.resize_token_embeddings(len(tokenizer)) # token size 수정
 
     if num_new_tokens > 0:
         input_embeddings = model.get_input_embeddings().weight.data
@@ -125,7 +125,8 @@ def preprocess(
     tokenizer: transformers.PreTrainedTokenizer,
 ) -> Dict:
     """Preprocess the data by tokenizing."""
-    examples = [s + t for s, t in zip(sources, targets)]
+    examples = [s + t for s, t in zip(sources, targets)] # 질문과 정답 결합
+    # tokenizing 처리
     examples_tokenized, sources_tokenized = [_tokenize_fn(strings, tokenizer) for strings in (examples, sources)]
     input_ids = examples_tokenized["input_ids"]
     labels = copy.deepcopy(input_ids)
@@ -134,24 +135,27 @@ def preprocess(
     return dict(input_ids=input_ids, labels=labels)
 
 
-class SupervisedDataset(Dataset):
+# tokenizer를 통해서 모델이 학습할 프롬프트 문장과 정답 데이터를 제작
+class SupervisedDataset(Dataset): 
     """Dataset for supervised fine-tuning."""
 
     def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer):
         super(SupervisedDataset, self).__init__()
         logging.warning("Loading data...")
-        list_data_dict = utils.jload(data_path)
-
+        # alpaca_data.json 파일에서 데이터를 읽어오기 (리스트 형태로)
+        list_data_dict = utils.jload(data_path) 
         logging.warning("Formatting inputs...")
         prompt_input, prompt_no_input = PROMPT_DICT["prompt_input"], PROMPT_DICT["prompt_no_input"]
+        # 프롬프트 문장
         sources = [
             prompt_input.format_map(example) if example.get("input", "") != "" else prompt_no_input.format_map(example)
             for example in list_data_dict
         ]
+        # 라벨
         targets = [f"{example['output']}{tokenizer.eos_token}" for example in list_data_dict]
-
         logging.warning("Tokenizing inputs... This may take some time...")
-        data_dict = preprocess(sources, targets, tokenizer)
+        # 학습용 데이터 전처리
+        data_dict = preprocess(sources, targets, tokenizer) 
 
         self.input_ids = data_dict["input_ids"]
         self.labels = data_dict["labels"]
@@ -185,7 +189,7 @@ class DataCollatorForSupervisedDataset(object):
 def make_supervised_data_module(tokenizer: transformers.PreTrainedTokenizer, data_args) -> Dict:
     """Make dataset and collator for supervised fine-tuning."""
     train_dataset = SupervisedDataset(tokenizer=tokenizer, data_path=data_args.data_path)
-    data_collator = DataCollatorForSupervisedDataset(tokenizer=tokenizer)
+    data_collator = DataCollatorForSupervisedDataset(tokenizer=tokenizer) # 학습을 batch 단위로 잘 하기 위해서 만든 class
     return dict(train_dataset=train_dataset, eval_dataset=None, data_collator=data_collator)
 
 
@@ -193,11 +197,12 @@ def train():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
+    # 모델 로딩
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
     )
-
+    # tokenizer 로딩
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
@@ -205,12 +210,16 @@ def train():
         padding_side="right",
         use_fast=False,
     )
-    if tokenizer.pad_token is None:
+
+    # tokenizer 업데이트
+    if tokenizer.pad_token is None: 
         smart_tokenizer_and_embedding_resize(
             special_tokens_dict=dict(pad_token=DEFAULT_PAD_TOKEN),
             tokenizer=tokenizer,
             model=model,
         )
+
+
     if "llama" in model_args.model_name_or_path:
         tokenizer.add_special_tokens(
             {
@@ -220,9 +229,14 @@ def train():
             }
         )
 
+    # 학습용 데이터 준비
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_args=data_args)
+
+    # 학습 (fine-tuning)
     trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
     trainer.train()
+
+    # 학습한 모델 저장
     trainer.save_state()
     safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
 
