@@ -1,0 +1,3 @@
+import pandas as pd
+midjournery_prompt_image_pair = pd.read_csv("./dataset.csv",encoding="utf-8")
+print(len(midjournery_prompt_image_pair.loc[(midjournery_prompt_image_pair['PROMPT'] == 'A stunningly realistic beach scene in 4K Ultra HD, with crystal clear turquoise waters, golden sands, and lush palm trees swaying in a gentle breeze, all illuminated by a psychedelic sunset featuring vibrant hues of pink, purple, and orange, casting a magical glow on the landscape. The highly detailed, HDR rendering captures every nuance of the surroundings, immersing you in a truly lifelike, tranquil beach getaway with a touch of surreal beauty. #HDR #4K #UltraHD #RealisticRender #HighlyDetailed #PsychedelicSunset --ar 18:39 --q 2 --upbeta --v 5')]))
