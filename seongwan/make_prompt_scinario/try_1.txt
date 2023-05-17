@@ -1,0 +1,79 @@
+scinario1: 
+첫 번째 대화:
+
+아이: Bohemian Waxwing 새를 그림으로 그려봐. 그리고 디테일한 부분도 많이 넣어줘.
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render
+
+아이: 그런데 그림이 너무 어두워 보이는데 밝게 해줄 수 있을까?
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20
+
+아이: 그럼 이번에는 Johanna Rupprecht 스타일로 그려봐.
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, Johanna Rupprecht style
+
+아이: 그림 비율은 9:16로 해줄 수 있을까?
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, Johanna Rupprecht style, –ar 9:16
+
+두 번째 대화:
+
+아이: 그런데 William Morris 스타일로 그려봐.
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, William Morris style
+
+아이: 그림에 빨간색을 좀 더 넣어줄 수 있을까?
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, William Morris style, –colorize red
+
+아이: 그리고 새의 부리가 더 길게 보이면 좋겠어.
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, William Morris style, –colorize red, –beak length +10
+
+아이: 그런데 새가 꽃잎 위에 앉아있는 모습으로 그려줄 수 있을까?
+
+AI: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, –brightness +20, William Morris style, –colorize red, –beak length +10, –on flower
+
+첫 번째 대화:
+
+아이: 큰 절벽 위에 핑크 벚꽃 나무가 있는 아름다운 나무집을 만들어봐. 그리고 빛이 비추는 거 같은데 눈이 내리면서 핑크 벚꽃 나무가 반짝이는 느낌도 넣어줘. 
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees
+
+아이: 그러면 로저 디킨스, 모에비우스, 알폰스 뮤하와 구와이즈 같은 사람들이 디자인한 것처럼 복잡한 디테일도 넣어줘. 그리고 사진 같이 아주 아주 진짜같이 그려봐.
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic
+
+아이: 그리고 빛이 비추는 거 같은데 눈이 내리면서 핑크 벚꽃 나무가 반짝이는 느낌도 넣어줘.
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, volumetric lighting
+
+아이: 핸드폰 화면에 맞게 비율을 조정하고, 초점이 아주 선명하게 보이면 좋겠어. 그리고 화려한 부츠가 달린 우주복을 입은 사람이 나무집 안에 있는 모습도 넣어봐.
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 4000space suit with boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16
+
+두 번째 대화:
+
+아이: 나무집이 너무 핑크색이 강해보여. 좀 더 연한 핑크색으로 바꿔줄래?
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic soft pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 4000space suit with boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16
+
+아이: 그리고 나무집이 너무 높아보여. 좀 낮게 만들어줄래?
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic soft pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 4000space suit with boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16 --downlight
+
+아이: 그리고 사람이 입고 있는 우주복이 너무 무거워보여. 좀 가벼운 우주복으로 바꿔줄래?
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic soft pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 4000space suit with light boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16 --downlight
+
+세 번째 대화:
+
+아이: 나무집이 너무 어두워보여. 좀 밝게 만들어줄래?
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic soft pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, bright volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 4000space suit with light boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16 --downlight
+
+아이: 그리고 나무집이 너무 작아보여. 좀 더 크게 만들어줄래?
+
+모델: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic soft pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, photographic, cinematic lighting, bright volumetric lighting, --ar 9:20 --no blur bokeh defocus dof --s 5000space suit with light boots, futuristic, character design, cinematic lightning, hyper realistic, detail 8k --ar 9:16 --downlight
+

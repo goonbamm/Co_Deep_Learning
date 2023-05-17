@@ -1,0 +1,110 @@
+scinario1: 
+아이: 색감이 아름다운 Bohemian Waxwing 새 그림을 그려줘. 그리고 그림에는 매우 복잡하고 정교한 디테일이 들어가야 해. Octane render를 사용해서 그림을 더욱 생생하게 만들어줘. Johanna Rupprecht나 William Morris 스타일로 그려주면 좋겠어. 그리고 최근 Artstation에서 트렌딩 중인 그림같은 느낌으로 만들어줘. 그림 비율은 핸드폰 화면에 맞게 해줘. 
+
+Model: ethereal Bohemian Waxwing bird, intricate details, ornate, detailed illustration, octane render, Johanna Rupprecht style, William Morris style, trending on Artstation, –ar 9:16
+----------------------------------------------------
+아이: 큰 산 위에 분홍색 벚꽃 나무가 있는 아름다운 나무 집을 만들어봐. 그리고 빛이 비춰지는데 푸른색과 갈색이 어울리는 느낌으로 해줘. 그리고 눈이 내리면서 분홍색 벚꽃 나무들도 함께 있는 느낌을 주는 그림으로 만들어봐.
+
+Model: THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Mucha and Guweiz :: Intricate details, very realistic, cinematic lighting, volumetric lighting, photographic, --ar 9:20 --no blur bokeh defocus dof --s 4000
+
+아이: 그리고 주인공은 우주복을 입고 부츠를 신은 미래적인 느낌의 캐릭터로 만들어줘. 그리고 영화 같은 느낌으로 화려하게 만들어봐. 그리고 그림이 너무 현실적이면 좋겠어.
+
+Model: space suit with boots, futuristic, character design, cinematic lightning, epic fantasy, hyper realistic, detail 8k --ar 9:16
+----------------------------------------------------
+아이: 보이드 아르카니스트를 그려줘. 안개가 있으면 더 좋겠어. 그리고 그림이 아주 아주 진짜같으면 좋겠어.
+
+Model: Character design, void arcanist, mist, photorealistic, Octane render, Unreal Engine, hyper detailed, volumetric lighting, hdr. --ar 9:16.
+----------------------------------------------------
+아이: 예쁘고 차가운 느낌의 사이버펑크 여성을 그려봐. 눈썹은 검은색이고 눈은 파란색으로, 한쪽 머리는 깎아내고 헤어스타일은 사이드 컷으로 해줘. 그리고 디테일을 많이 살려서 그림이 아주 아주 진짜같이 보이면 좋겠어. 빛은 시네마틱한 느낌으로, 마법 같은 네온빛도 추가해줘. 그리고 도시는 어둡고 붉은색 조명이 있는 느낌으로 해줘. 핸드폰 화면에 맞게 비율도 맞춰줘. 
+
+AI: beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city --ar 9:16 --testp --upbeta
+----------------------------------------------------
+아이: 강아지를 그려줘. 귀여워야 하고, 꿈같은 느낌이 나야 해. 그리고 강아지는 자신감이 넘치는 느낌이어야 해. 그리고 힘이 넘치는 느낌도 있으면 좋겠어. 마법같은 느낌도 나면 좋겠어. 그리고 영화같은 느낌도 있으면 좋겠어. 그리고 내부에서 빛이 비치는 느낌도 있으면 좋겠어. 
+
+Model: liquid otherworldly cool dreamy dog, cuddly, arrogant, powerful, high fantasy, epic, cinematic, internal glow --ar 2:3 --test --s 1625 --upbeta
+----------------------------------------------------
+scinario2: 
+아이: 야생동물들이 살고 있는 숲 같은 그림을 그려줘. 그리고 그림에는 Bohemian Waxwing 새를 넣어줘. 그리고 그 새가 빛나는 것처럼 ethereal한 느낌이 나도록 해줘.
+
+"Model: A forest with wildlife, including an ethereal Bohemian Waxwing bird. The illustration will be ornate, with intricate details, and will be rendered using Octane. The style will be inspired by Johanna Rupprecht and William Morris, and the artwork is currently trending on Artstation. The aspect ratio will be 9:16."
+
+아이: 그런데 그 새가 더욱 더 빛나는 느낌이 나도록 해줄 수 있을까?
+
+"Model: The intricate details of the Bohemian Waxwing bird will be emphasized, and the illustration will be rendered with even more ornate details to make the bird look even more radiant."
+
+아이: 그리고 그 새가 더욱 더 선명하게 보이도록 해줄 수 있을까?
+
+"Model: The illustration will be rendered using Octane Render to create a hyper-realistic effect, making the Bohemian Waxwing bird look even more detailed and vibrant."
+
+아이: 그리고 그림이 Johanna Rupprecht나 William Morris 스타일로 그려지도록 해줘.
+
+"Model: The illustration will be created in the style of both Johanna Rupprecht and William Morris, combining intricate details and ornate designs to create a stunning piece of art."
+
+아이: 그리고 그림이 핸드폰 화면에 잘 맞도록 해줘.
+
+"Model: The aspect ratio of the illustration will be 9:16, perfect for viewing on a mobile device."
+
+아이: 그리고 그림이 artstation에서 trending하도록 해줘.
+
+"Model: The artwork will be created in a style that is currently trending on Artstation, ensuring that it will be well-received by the online art community."
+----------------------------------------------------
+아이: 진짜 예쁜 벚꽃 나무 집을 그려줘! 그리고 높은 절벽 위에 있고, 눈이 내리고 있어. 
+
+"Model: A beautiful cherry blossom tree house on a high cliff with snow. Very detailed and realistic. Cinematic lighting and volumetric lighting. The style is inspired by the works of Roger Deakins, Moebius, Alphonse Mucha, and Guweiz. --ar 9:20 --no blur bokeh defocus dof"
+
+아이: 그리고 우주복을 입은 사람이 있으면 좋겠어. 그리고 미래적인 느낌이 나게 그려줘! 
+
+"Model: A beautiful cherry blossom tree house on a high cliff with snow. Very detailed and realistic. Cinematic lighting and volumetric lighting. The style is inspired by the works of Roger Deakins, Moebius, Alphonse Mucha, and Guweiz. The space suit with boots is included in the design, giving it a futuristic feel. --ar 9:20 --no blur bokeh defocus dof"
+
+아이: 그리고 빛나는 느낌이 나게끔 조명도 예쁘게 해줘! 그리고 환상적인 느낌도 나게끔 해줘! 
+
+"Model: A beautiful cherry blossom tree house on a high cliff with snow. Very detailed and realistic. Cinematic lighting and volumetric lighting. The style is inspired by the works of Roger Deakins, Moebius, Alphonse Mucha, and Guweiz. The space suit with boots is included in the design, giving it a futuristic feel. The lighting is designed to be both beautiful and fantastical, with a hyper-realistic and detailed 8K design. --ar 9:16"
+
+아이: 그리고 초점이 맞게끔 화면 비율도 조정해줘! 
+
+"Model: A beautiful cherry blossom tree house on a high cliff with snow. Very detailed and realistic. Cinematic lighting and volumetric lighting. The style is inspired by the works of Roger Deakins, Moebius, Alphonse Mucha, and Guweiz. The space suit with boots is included in the design, giving it a futuristic feel. The lighting is designed to be both beautiful and fantastical, with a hyper-realistic and detailed 8K design. --ar 9:16 --s 4000"
+
+아이: 그리고 그림이 움직이는 느낌이 나게끔 그려줘! 
+
+"Model: A beautiful cherry blossom tree house on a high cliff with snow. Very detailed and realistic. Cinematic lighting and volumetric lighting. The style is inspired by the works of Roger Deakins, Moebius, Alphonse Mucha, and Guweiz. The space suit with boots is included in the design, giving it a futuristic feel. The lighting is designed to be both beautiful and fantastical, with a hyper-realistic and detailed 8K design. --ar 9:16 --s 4000 --cinematic lightning, epic fantasy, hyper realistic, detail 8k"
+----------------------------------------------------
+아이: 저번에 만들어준 그림처럼, void arcanist 라는 캐릭터를 만들어봐. 그리고 그 캐릭터가 머무는 곳이 미스트로 가득한 곳이면 좋겠어. 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine"
+
+아이: 그리고 그 캐릭터의 옷에는 어떤 문양이나 장식이 있으면 좋을까? 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing"
+
+아이: 그리고 캐릭터의 머리에는 뭔가 장식이나 머리띠 같은 걸 달아줄 수 있을까? 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory"
+
+아이: 그리고 그 캐릭터가 손에 들고 있는 무기나 도구 같은 걸 만들어줄 수 있을까? 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory, intricate weapon or tool"
+
+아이: 그리고 그 캐릭터가 미스트를 다루는 마법사라면, 그 마법의 모습을 어떻게 표현할 수 있을까? 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory, intricate weapon or tool, mist manipulation magic effects"
+
+아이: 그리고 그 캐릭터가 미스트 속에서 움직일 때, 미스트가 움직이는 모습도 표현해줘. 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory, intricate weapon or tool, mist manipulation magic effects, mist movement animation" 
+
+아이: 그리고 그 캐릭터의 표정이나 감정을 표현할 수 있을까? 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory, intricate weapon or tool, mist manipulation magic effects, mist movement animation, facial expressions and emotions" 
+
+아이: 마지막으로 그 캐릭터가 미스트 속에서 움직일 때, 발밑에 미스트가 휘날리는 모습도 표현해줘. 
+
+"Model: void arcanist, mist, photorealistic, hyper detailed, volumetric lighting, hdr, octane render, unreal engine, ornate patterns on clothing, head accessory, intricate weapon or tool, mist manipulation magic effects, mist movement animation, facial expressions and emotions, mist swirling around feet animation"
+----------------------------------------------------
+아이: 예쁜 사이버펑크 여성 캐릭터를 그려봐. 눈은 파란색으로, 검은 아이라인이 진하게 그어져 있어야 해. 머리는 한쪽만 깎아놓은 컷이야. 그리고 디테일이 많아야 해. 무슨 분위기를 내고 싶냐면, 매직 네온 빛깔이 들어간 어두운 도시처럼. 
+
+"Model: beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city --ar 9:16 --testp --upbeta"
+----------------------------------------------------
+아이: 꿈같은 강아지 그림을 그려봐. 귀여우면서도 거만하고 강력한 느낌이 나게 그려줘. 그리고 판타지 같은 느낌도 내게 줘. 영화같은 느낌도 좋아.
+
+"Model: liquid, otherworldly, cool, dreamy, dog, cuddly, arrogant, powerful, high fantasy, epic, cinematic, internal glow --ar 2:3 --test --s 1625 --upbeta"
+----------------------------------------------------
