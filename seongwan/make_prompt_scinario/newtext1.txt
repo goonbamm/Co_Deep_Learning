@@ -1,0 +1,112 @@
+아이: 색다른 새 그림을 그려봐. 그리고 디테일한 그림이 좋아.
+
+Model: An intricate and ornate illustration of an ethereal Bohemian Waxwing bird, rendered with Octane, in the style of Johanna Rupprecht or William Morris, currently trending on Artstation. --ar 9:16.
+
+아이: 그 새는 어떤 색으로 그려야 할까?
+
+Model: The ethereal Bohemian Waxwing bird can be illustrated in a variety of colors, depending on your preference. What colors would you like to see?
+
+아이: 그럼 색은 붉은색과 검은색, 그리고 흰색으로 해줘.
+
+Model: The ethereal Bohemian Waxwing bird can be illustrated with a combination of red, black, and white colors to create a striking and unique image. The intricate details and ornate design will be rendered with Octane, in the style of Johanna Rupprecht or William Morris, currently trending on Artstation. --ar 9:16.
+
+아이: 그리고 그 새의 날개가 펼쳐진 모습으로 그려줘.
+
+Model: The ethereal Bohemian Waxwing bird can be illustrated with its wings spread wide, showcasing the intricate details and ornate design. The illustration will be rendered with Octane, in the style of Johanna Rupprecht or William Morris, currently trending on Artstation. --ar 9:16.
+
+아이: 그리고 그림이 아주 선명하게 보이면 좋겠어.
+
+Model: The illustration of the ethereal Bohemian Waxwing bird will be rendered with high clarity and detail to create a hyper-realistic image. The intricate details and ornate design will be rendered with Octane, in the style of Johanna Rupprecht or William Morris, currently trending on Artstation. --ar 9:16.
+----------------------------------------------------
+아이: 큰 벚꽃 나무 위에 아름다운 나무 집을 만들어줘. 그리고 높은 절벽 위에 놓아봐. (The cherry blossom tree house, on a high blue grey and brown cliff)
+
+Model: The cherry blossom tree house, on a high blue grey and brown cliff, with light snow and pink cherry blossom trees.
+
+아이: 그리고 그 나무 집 안에 로저 디킨스, 모에비우스, 알폰스 무크, 그리고 구웨이즈의 작품들이 들어가면 좋겠어. (Roger Deakins and Moebius and Alphonse Mucha and Guweiz)
+
+Model: The cherry blossom tree house, on a high blue grey and brown cliff, with light snow and pink cherry blossom trees, featuring works by Roger Deakins, Moebius, Alphonse Mucha, and Guweiz.
+
+아이: 그리고 그 나무 집의 디테일이 매우 복잡하게 나오면 좋겠어. 그리고 사실적인 조명과 광원감이 있으면 좋겠어. (Intricate details, very realistic, cinematic lighting, volumetric lighting, photographic)
+
+Model: The cherry blossom tree house, on a high blue grey and brown cliff, with light snow and pink cherry blossom trees, featuring works by Roger Deakins, Moebius, Alphonse Mucha, and Guweiz, with intricate details, very realistic, cinematic lighting, volumetric lighting, photographic.
+
+아이: 그리고 그 나무 집의 비율을 9:20으로 맞춰서 만들어줘. 그리고 블러, 보케, 디포커스 같은 효과는 빼줘. (--ar 9:20 --no blur bokeh defocus dof)
+
+Model: The cherry blossom tree house, beautiful ornate treehouse in a gigantic pink cherry blossom tree, on a high blue grey and brown cliff with light snow and pink cherry blossom trees, featuring works by Roger Deakins, Moebius, Alphonse Mucha, and Guweiz, with intricate details, very realistic, cinematic lighting, volumetric lighting, photographic, --ar 9:20 --no blur bokeh defocus dof.
+
+아이: 그리고 그 나무 집 안에 4000스페이스 슈트와 부츠를 입은 미래적인 캐릭터를 넣어줘. 그리고 하이퍼리얼리스틱한 디테일과 8k의 해상도로 만들어줘. (--s 4000 space suit with boots, futuristic, character design, cinematic lightning, epic fantasy, hyper realistic, detail 8k --ar 9:16)
+
+Model: The cherry blossom tree house, beautiful ornate treehouse in a gigantic pink cherry blossom tree, on a high blue grey and brown cliff with light snow and pink cherry blossom trees, featuring works by Roger Deakins, Moebius, Alphonse Mucha, and Guweiz, with intricate details, very realistic, cinematic lighting, volumetric lighting, photographic, --ar 9:20 --no blur bokeh defocus dof, including a futuristic character wearing a 4000 space suit with boots, with hyper-realistic detail and 8k resolution, cinematic lighting, and an epic fantasy feel.
+----------------------------------------------------
+아이: 저는 영웅을 그린 그림을 원해요. 그리고 그게 파란색 안개 속에서 나타나는 걸로 해주세요.
+
+Model: a hero character design, blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr. --ar 9:16
+
+아이: 그런데 그림이 너무 어두워 보여요. 밝게 만들어주세요.
+
+Model: a hero character design, blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr, brighter. --ar 9:16
+
+아이: 그리고 그 영웅이 마법사라면 좋겠어요. 마법사 같은 느낌을 내도록 해주세요.
+
+Model: a hero character design, void arcanist, blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr, brighter. --ar 9:16
+
+아이: 그런데 파란색 안개가 너무 짙어요. 연한 파란색으로 만들어주세요.
+
+Model: a hero character design, void arcanist, light blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr, brighter. --ar 9:16
+
+아이: 그리고 그 영웅이 날아다니는 모습도 넣고 싶어요. 그래서 그림에는 구름이랑 바람 같은 거도 넣어주세요.
+
+Model: a hero character design, void arcanist, light blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr, flying with clouds and wind. --ar 9:16
+
+아이: 그리고 그림 비율은 핸드폰 화면에 맞게 해주세요. 그리고 그 영웅이 손에 지팡이를 들고 있는 모습으로 그려주세요.
+
+Model: a hero character design, void arcanist, light blue mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr, flying with clouds and wind, holding a staff, --ar 9:16
+----------------------------------------------------
+아이: 예쁜 사이버펑크 여자 캐릭터를 그려봐. 그리고 눈은 파란색으로, 눈썹은 진한 검은색 아이라이너로, 머리는 한쪽만 깎아서 스타일리시하게. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city --ar 9:16 --testp --upbeta
+
+아이: 그리고 빛이 많이 들어와서 더 환한 느낌을 내봐. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, bright lighting, dark red city --ar 9:16 --testp --upbeta
+
+아이: 그런데 빛이 너무 많이 들어와서 좀 어둡게 해줘. 그러면 더 매력적일 것 같아. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dim lighting, dark red city --ar 9:16 --testp --upbeta
+
+아이: 그리고 빨간색 빛으로 도시를 더 어둡게 해줘. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dim lighting, dark red city with red neon lights --ar 9:16 --testp --upbeta
+
+아이: 그리고 그림에서 느껴지는 마법 같은 느낌이 있으면 좋겠어. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dim lighting, dark red city with red neon lights and magical atmosphere --ar 9:16 --testp --upbeta
+
+아이: 마지막으로, 그림 비율은 핸드폰 화면에 맞게 해줘. 
+
+Model: A beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dim lighting, dark red city with red neon lights and magical atmosphere --ar 9:16 --testp --upbeta --ar 9:16
+----------------------------------------------------
+아이: 꿈 같은 개를 그려봐. 그리고 귀여운 느낌도 넣어줘. 
+
+Model: A liquid otherworldly cool dreamy dog, cuddly
+
+아이: 그리고 개가 자신감 있게 보이면 좋겠어. 
+
+Model: arrogant, powerful
+
+아이: 판타지 같은 느낌도 내봐. 
+
+Model: high fantasy, epic, cinematic
+
+아이: 그리고 개 안에서 빛이 나는 느낌도 있으면 좋겠어. 
+
+Model: internal glow
+
+아이: 그리고 사진 비율은 2:3으로 해줘. 
+
+Model: --ar 2:3
+
+아이: 그리고 더 자세한 테스트 결과를 위해 --test --s 1625 --upbeta도 추가해줘. 
+
+Model: --test --s 1625 --upbeta
+----------------------------------------------------
