@@ -1,14 +1,17 @@
 import openai
-import time
-import copy
-
+import json
+import csv
+import pandas as pd
+from tqdm import tqdm
 # gpt-turbo api key
 
-PROMPTS = ["ethereal Bohemian Waxwing bird,Bombycilla garrulus :: intricate details,ornate,detailed illustration,octane render :: Johanna Rupprecht style,William Morris style :: trending on artstation --ar 9:16",
+TEST_PROMPTS = ["ethereal Bohemian Waxwing bird,Bombycilla garrulus :: intricate details,ornate,detailed illustration,octane render :: Johanna Rupprecht style,William Morris style :: trending on artstation --ar 9:16",
            "THE CHERRY BLOSSOM TREE HOUSE :: beautiful ornate treehouse in a gigantic pink cherry blossom tree :: on a high blue grey and brown cliff with light snow and pink cherry blossom trees :: Roger Deakins and Moebius and Alphonse Much and Guweiz :: Intricate details, very realistic, cinematic lighting, volumetric lighting, photographic, --ar 9:20 --no blur bokeh defocus dof --s 4000""space suit with boots, futuristic, character design, cinematic lightning, epic fantasy, hyper realistic, detail 8k --ar 9:16",
            "character design, void arcanist, mist, photorealistic, octane render, unreal engine, hyper detailed, volumetric lighting, hdr. --ar 9:16",
            "beautiful pale cyberpunk female with heavy black eyeliner, blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city --ar 9:16 --testp --upbeta",
            "liquid otherworldly cool dreamy dog, cuddly, arrogant, powerful, high fantasy, epic, cinematic, internal glow --ar 2:3 --test --s 1625 --upbeta"]
+
+openai.api_key = "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"
 
 def Make_scinario(prompt,tmp):
     response = openai.ChatCompletion.create(
@@ -43,14 +46,26 @@ def Make_scinario(prompt,tmp):
 
 
 
-f = open("./newtext1.txt","w", encoding="utf-8")
+with open('./filtered_prompt.json', 'r') as f:
+    json_data = json.load(f)
+json_data = json.dumps(json_data) 
+json_data = json_data.split('"')
 
-for prompt in PROMPTS :
-   scinario = Make_scinario(prompt,0.5)
-   print("-" * 100)
-   print(scinario)
-   print("-" * 100)
-   f.write(scinario + "\n----------------------------------------------------\n")
-
-f.close()
-
+COLUMNS = ['PROMPT','SCINARIO']
+df = pd.DataFrame(columns=COLUMNS)
+original_Data = pd.read_csv("./dataset.csv",index_col=0)
+df = pd.concat([df,original_Data])
+for i in tqdm(range(1473,len(json_data))):
+    if i % 2 == 1 :    
+        prompt = json_data[i]
+        try:
+            scinario = Make_scinario(json_data[i],0.5)
+            newDF = list()
+            newDF.append(prompt)
+            newDF.append(scinario)
+            newDF = pd.DataFrame(data=[newDF], columns = COLUMNS)      
+            df = pd.concat([df,newDF])       
+            df.to_csv("dataset.csv")       
+        except:
+            print("error index : ",i)
+#df.to_csv("dataset.csv", encoding='cp949')
