@@ -1,14 +1,25 @@
-import os
 import torch
 import argparse
+import transformers
+
+from dataset import SupervisedDataset, DataCollatorForSupervisedDataset
 
 from utils import set_seed, print_trainable_parameters
 
-from datasets import load_dataset
+
+from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 from transformers import (AutoTokenizer, AutoModelForCausalLM,
                           BitsAndBytesConfig, Trainer,
                           TrainingArguments, DataCollatorForLanguageModeling)
-from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
+
+
+def make_supervised_data_module(tokenizer: transformers.PreTrainedTokenizer, data_files):
+    """Make dataset and collator for supervised fine-tuning."""
+    train_dataset = SupervisedDataset(tokenizer=tokenizer, data_path=data_files['train'])
+    valid_dataset = SupervisedDataset(tokenizer=tokenizer, data_path=data_files['valid'])
+    data_collator = DataCollatorForSupervisedDataset(tokenizer=tokenizer)
+    return dict(train_dataset=train_dataset, eval_dataset=valid_dataset,
+                data_collator=data_collator)
 
 
 def main():
@@ -26,11 +37,23 @@ def main():
         bnb_4bit_compute_dtype=torch.bfloat16
     )
 
-    # LOAD TOKENIZER & MODEL
-    tokenizer = AutoTokenizer.from_pretrained(args.checkpoint)
-    tokenizer.truncation_side='left'
-    tokenizer.pad_token = tokenizer.eos_token
+    # LOAD TOKENIZER
+    tokenizer = AutoTokenizer.from_pretrained(
+        args.checkpoint,
+        use_fast=False,
+        truncation_side='left',
+        )
 
+    # LOAD DATASET FROM LOCAL FILES
+    data_files = {
+        'train': '../preprocess/train.csv',
+        'valid': '../preprocess/valid.csv',
+        'test': '../preprocess/test.csv'
+    }
+    
+    data_module = make_supervised_data_module(tokenizer=tokenizer, data_files=data_files)
+
+    # LOAD MODEL
     model = AutoModelForCausalLM.from_pretrained(args.checkpoint,
                                                  quantization_config=bnb_config,
                                                  device_map='auto')
@@ -54,34 +77,22 @@ def main():
     model = get_peft_model(model, config)
     print_trainable_parameters(model)
     
-    # LOAD DATASET FROM LOCAL FILES
-    data_files = {'train': 'train.csv', 'validation': 'valid.csv', 'test': 'test.csv'}
-    dataset = load_dataset('../preprocess', data_files)
-
-    def tokenization(example):
-        return tokenizer(example['scenario'], truncation=True, padding=True, max_length=1024)    
-
-    dataset = dataset.map(tokenization, batched=True, remove_columns=['prompt', 'input', 'output', 'scenario'])
-
     # LOAD TRAINER
     trainer = Trainer(
         model=model,
-        train_dataset=dataset['train'],
-        eval_dataset=dataset['validation'],
+        tokenizer=tokenizer,
         args=TrainingArguments(
             per_device_train_batch_size=args.batch_size,
             gradient_accumulation_steps=4,
-            # max_steps=args.max_steps,
             logging_steps=args.logging_steps,
             learning_rate=args.lr,
             warmup_steps=2,
-            # fp16=True,
             output_dir='outputs',
             optim='paged_adamw_8bit',
             report_to='none',
             num_train_epochs=args.epoch
         ),
-        data_collator=DataCollatorForLanguageModeling(tokenizer, mlm=False),
+        **data_module
     )
     model.config.use_cache = False  # silence the warnings. Please re-enable for inference!
     trainer.train()
@@ -89,8 +100,8 @@ def main():
 
 def get_args():
     parser = argparse.ArgumentParser(description='Dialogue Generation for prompt')
-    parser.add_argument('--checkpoint', help='the model name', default='beomi/kollama-7b',
-                        choices=['beomi/kollama-7b', ''])
+    parser.add_argument('--checkpoint', help='the model name', default='beomi/kollama-13b',
+                        choices=['beomi/kollama-7b', 'beomi/kollama-13b'])
 
     parser.add_argument('--seed', type=int, help='seed', default=42)
     parser.add_argument('--batch_size', type=int, help='batch_size', default=4)
