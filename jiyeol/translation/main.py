@@ -46,9 +46,9 @@ def main():
 
     # LOAD DATASET FROM LOCAL FILES
     data_files = {
-        'train': '../preprocess/train.csv',
-        'valid': '../preprocess/valid.csv',
-        'test': '../preprocess/test.csv'
+        'train': '../preprocess/translation/train.csv',
+        'valid': '../preprocess/translation/valid.csv',
+        'test': '../preprocess/translation/test.csv'
     }
     
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_files=data_files)
@@ -104,7 +104,7 @@ def get_args():
                         choices=['beomi/kollama-7b', 'beomi/kollama-13b'])
 
     parser.add_argument('--seed', type=int, help='seed', default=42)
-    parser.add_argument('--batch_size', type=int, help='batch_size', default=4)
+    parser.add_argument('--batch_size', type=int, help='batch_size', default=32)
     parser.add_argument('--epoch', type=int, help='training epochs', default=5)
     parser.add_argument("--lr", type=float, help="learning rate", default=1e-4)
 
