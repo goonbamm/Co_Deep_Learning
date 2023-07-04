@@ -1,6 +1,7 @@
-outputs/
 wandb/
+outputs/
+results/
 __pycache__/
-settings.json
+
 *.csv
 *.json
