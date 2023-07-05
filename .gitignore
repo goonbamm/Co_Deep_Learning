@@ -1,6 +1,7 @@
 wandb/
 outputs/
 results/
+.vscode/
 __pycache__/
 
 *.csv

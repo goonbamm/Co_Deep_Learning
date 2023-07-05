@@ -90,7 +90,8 @@ def main():
             output_dir='outputs',
             optim='paged_adamw_8bit',
             report_to='none',
-            num_train_epochs=args.epoch
+            num_train_epochs=args.epoch,
+            save_strategy='epoch'
         ),
         **data_module
     )
@@ -99,7 +100,7 @@ def main():
 
 
 def get_args():
-    parser = argparse.ArgumentParser(description='Dialogue Generation for prompt')
+    parser = argparse.ArgumentParser(description='Prompt Translation for prompt')
     parser.add_argument('--checkpoint', help='the model name', default='beomi/kollama-13b',
                         choices=['beomi/kollama-7b', 'beomi/kollama-13b'])
 
