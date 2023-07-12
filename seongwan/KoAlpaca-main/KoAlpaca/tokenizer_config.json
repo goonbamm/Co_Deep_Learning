@@ -1,9 +1,0 @@
-{
-  "bos_token": "",
-  "eos_token": "",
-  "model_max_length": 512,
-  "padding_side": "right",
-  "special_tokens_map_file": "/workspace/llama/llama-7b/special_tokens_map.json",
-  "tokenizer_class": "LlamaTokenizer",
-  "unk_token": ""
-}
