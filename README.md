@@ -7,6 +7,7 @@
 
 <br>
 
+- [박성완](https://github.com/Tro-fish), [홍동희](https://github.com/sth49)와 함께 하였습니다.
 - 교내에서 진행하는 Co Deep Learning Project 에 참가하여 최우수상을 수상하였습니다.
 - [뤼튼](https://wrtn.ai/store/details/65a635ea378fffc6a783914e)에서 저희 프롬프트를 만나보실 수 있습니다.
 
